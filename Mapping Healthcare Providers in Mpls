@@ -2,11 +2,18 @@
     "nbformat_minor": 1, 
     "cells": [
         {
-            "source": "This notebook demonstrates my use of the following packages to make a visual showing all critical care centers within 30 miles of a given neighborhood in Minneapolis.\n<br><ul> <li>pandas and numpy for data management and organization</li>\n<br><li>BeautifulSoup for web scraping and html parsing</li>\n<br><li>geocoder for location grabbing</li>\n<br><li>FourSquare API integration for venue information</li>\n<br><li>Folium for mapping</li>", 
+            "source": "This notebook demonstrates my use of the following packages to make a visual showing all critical care centers within 30 miles of a given neighborhood in Minneapolis\n<br><ul> <li>pandas and numpy for data management and organization</li>\n<br><li>BeautifulSoup for web scraping and html parsing</li>\n<br><li>geocoder for location grabbing</li>\n<br><li>FourSquare API integration for venue information</li>\n<br><li>Folium for mapping</li>", 
             "cell_type": "markdown", 
             "metadata": {
                 "collapsed": true
             }
+        }, 
+        {
+            "source": "Please view it on IBM's Watson Studio at the following link if you are viewing it on GitHub.<br>\nhttps://dataplatform.cloud.ibm.com/analytics/notebooks/v2/9bd3e9f7-2df1-468f-a160-665f2f7c33a4/view?access_token=57ccf0f013e8cd4fe8bb4501a00f0efff0afd6a8505e448e247b1df20f33ef28", 
+            "cell_type": "code", 
+            "metadata": {}, 
+            "outputs": [], 
+            "execution_count": null
         }, 
         {
             "source": "import numpy as np\nimport pandas as pd\npd.set_option('display.max_columns', None)\npd.set_option('display.max_rows', None)\n\nimport json\n\n!conda install -c conda-forge geopy --yes\nfrom geopy.geocoders import Nominatim\n\nimport requests\nfrom pandas.io.json import json_normalize\n\nimport matplotlib.cm as cm\nimport matplotlib.colors as colors\n\nfrom sklearn.cluster import KMeans\n\n!conda install -c conda-forge folium=0.5.0 --yes\nimport folium\n\nfrom bs4 import BeautifulSoup", 
