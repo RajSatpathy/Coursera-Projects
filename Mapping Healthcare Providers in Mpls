@@ -368,9 +368,11 @@
             "execution_count": 170
         }, 
         {
-            "source": "map_mplshealth=folium.Map(location=(mplslatitude,mplslongitude),zoom_start=12)\n\nfor lat,lng,category,label in zip(mpls_healthmapdata['Latitude'],mpls_healthmapdata['Longitude'],\n                                 mpls_healthmapdata['Has Providers'],maplabels['Label']):\n    label = folium.Popup(label,parse_html=True)\n    if category==1:\n        folium.CircleMarker(location=[lat,lng],\n                            radius=30,\n                            popup=label,\n                            color='green',\n                            fill=True,\n                            fill_color='#3186cc',\n                            fill_opacity=0.4,\n                            parse_html=False).add_to(map_mplshealth)\n    else:\n        folium.CircleMarker(location=[lat,lng],\n                           radius=5,\n                           popup=label,\n                           color='red',\n                           fill=True,\n                           fill_color='black',\n                           fill_opacity=1.0,\n                           parse_html=False).add_to(map_mplshealth)\n\nmap_mplshealth", 
+            "source": "map_mplshealth=folium.Map(location=(mplslatitude,mplslongitude),zoom_start=12)\n\nfor lat,lng,category,label in zip(mpls_healthmapdata['Latitude'],mpls_healthmapdata['Longitude'],\n                                 mpls_healthmapdata['Has Providers'],maplabels['Label']):\n    label = folium.Popup(label,parse_html=True)\n    if category==1:\n        folium.CircleMarker(location=[lat,lng],\n                            radius=30,\n                            popup=label,\n                            color='green',\n                            fill=True,\n                            fill_color='#3186cc',\n                            fill_opacity=0.4,\n                            parse_html=False).add_to(map_mplshealth)\n    else:\n        folium.CircleMarker(location=[lat,lng],\n                           radius=5,\n                           popup=label,\n                           color='red',\n                           fill=True,\n                           fill_color='black',\n                           fill_opacity=1.0,\n                           parse_html=False).add_to(map_mplshealth)", 
             "cell_type": "code", 
-            "metadata": {}, 
+            "metadata": {
+                "scrolled": false
+            }, 
             "outputs": [
                 {
                     "output_type": "execute_result", 
@@ -383,6 +385,20 @@
                 }
             ], 
             "execution_count": 171
+        }, 
+        {
+            "source": "map_mplshealth", 
+            "cell_type": "code", 
+            "metadata": {}, 
+            "outputs": [], 
+            "execution_count": null
+        }, 
+        {
+            "source": "", 
+            "cell_type": "code", 
+            "metadata": {}, 
+            "outputs": [], 
+            "execution_count": null
         }
     ], 
     "metadata": {
